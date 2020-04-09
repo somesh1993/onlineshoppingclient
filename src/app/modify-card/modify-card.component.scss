@@ -1,0 +1,34 @@
+
+button {
+    width: 200px;
+    color: blue;
+    background-color: lightblue;
+    margin: 20px;
+    cursor: pointer;
+}
+
+
+.card-box {
+    border: 1px solid black;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: burlywood;
+
+    span {
+        margin-right: 20px;
+        font-size: 25px;
+    }
+}
+
+.create-card {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 40px;
+}

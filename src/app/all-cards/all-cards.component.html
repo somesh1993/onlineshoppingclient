@@ -1,0 +1,45 @@
+<div class="page-title">
+    All Online Shopping Card Details
+</div>
+
+<div class="create-card">
+    <button [routerLink]="['/createCard']">Create New Card</button>
+</div>
+
+<div>
+    <form [formGroup]="searchCardFormGroup">
+        <span class="search-box">Search by Card Number: </span>
+        <input formControlName="cardNumber"/>
+    </form>
+</div>
+
+<div class="card-container">
+    <div class="card-box" *ngFor="let card of onlineShoppingCards">
+        <div>
+            <span appCustomColor>Bank Name:</span>
+            <span>{{card.BankName}}</span>
+        </div>
+        <div>
+            <span appCustomColor>First Name:</span>
+            <span>{{card.FirstName}}</span>
+        </div>
+        <div>
+            <span appCustomColor>Last Name:</span>
+            <span>{{card.LastName}}</span>
+        </div>
+        <div>
+            <span appCustomColor>Card Number:</span>
+            <span>{{card.CardNumber}}</span>
+        </div>
+        <div>
+            <span appCustomColor>Valid Date:</span>
+            <span>{{card.ValidDate}}</span>
+        </div>
+        <div>
+            <span appCustomColor>Price:</span>
+            <span>{{card.Price}}</span>
+        </div>
+        <button [routerLink]="['/modifyCard', card.CardNumber]">Modify</button>
+        <button (click)="deleteCard(card.CardNumber)">Delete</button>
+    </div>
+</div>

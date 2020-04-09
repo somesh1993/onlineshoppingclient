@@ -1,0 +1,41 @@
+<div class="page-title">
+    Modify Online Shopping Card
+</div>
+
+<div class="create-card">
+    <button [routerLink]="['/allCards']">Display All Cards</button>
+</div>
+
+<div class="card-container">
+    <form [formGroup]="modifyCardFormGroup">
+        <div class="card-box">
+            <div>
+                <span appCustomColor>Bank Name:</span>
+                <input formControlName="bankName" />
+            </div>
+            <div>
+                <span appCustomColor>First Name:</span>
+                <input formControlName="firstName" />
+            </div>
+            <div>
+                <span appCustomColor>Last Name:</span>
+                <input formControlName="lastName" />
+            </div>
+            <div>
+                <span appCustomColor>Card Number:</span>
+                <input formControlName="cardNumber" disabled="true"/>
+            </div>
+            <div>
+                <span appCustomColor>Valid Date:</span>
+                <input formControlName="date" />
+            </div>
+            <div>
+                <span appCustomColor>Price:</span>
+                <input formControlName="price" />
+            </div>
+            <button (click)="modifyDetails()">Modify</button>
+        </div>
+        <div *ngIf="isSuccessful && !errorMessage">Modified Successfully</div>
+        <div *ngIf="!isSuccessful && errorMessage">{{errorMessage}}</div>
+    </form>
+</div>
